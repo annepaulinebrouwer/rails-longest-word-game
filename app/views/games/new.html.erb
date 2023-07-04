@@ -1,0 +1,13 @@
+<h1>Let's start a new Game</h1>
+
+<% @letters.each do |letter| %>
+  <div class="badge bg-primary letters"><%=letter%></div>
+<% end %>
+<p></p>
+<form action="/score" method="post" data-turbo="false">
+  <input type="text" name="word" style="mt-20">
+  <input type="submit" value="Play" >
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= hidden_field_tag :time_start, @time_start%>
+  <%= hidden_field_tag :letters, @letters%>
+</form>

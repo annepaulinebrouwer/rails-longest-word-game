@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+ .letters {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 10px 15px;
+  display: inline;
+}
